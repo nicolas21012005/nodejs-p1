@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const ProductsService = require('./../services/product.service');
+const ProductsService = require('../services/product.service');
 const { tr } = require('@faker-js/faker');
 const service = new ProductsService();
-const validatorHandler = require('./../middlewares/validator.handler');
+const validatorHandler = require('../middlewares/validator.handler');
 const {
   createProductsSchema,
   updateProductsSchema,
   getProductsSchema,
-} = require('./../schemas/product.schema');
+} = require('../schemas/product.schema');
 const { valid } = require('joi');
 
 router.get('/', async (req, res) => {
